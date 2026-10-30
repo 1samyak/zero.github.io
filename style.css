@@ -1491,3 +1491,64 @@ th:last-child {
     }
 
 }
+
+
+/* Premium minimal design system */
+:root {
+  --bg: #080b12;
+  --surface: #101621;
+  --surface2: #141d2b;
+  --text: #edf2f8;
+  --muted: #9aa8ba;
+  --line: rgba(210,224,242,.12);
+  --primary: #9db8d7;
+  --secondary: #8db6c8;
+  --accent: #c0c9d6;
+  --shadow: 0 18px 48px rgba(0,0,0,.20);
+}
+body { background:#080b12; line-height:1.68; }
+body:before { display:none; }
+.top {
+  position:sticky; top:0; z-index:20; padding:0 28px;
+  background:rgba(8,11,18,.94); border-bottom:1px solid var(--line);
+  backdrop-filter:blur(16px);
+}
+.top-inner {
+  width:min(1160px,100%); min-height:76px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between; gap:18px;
+}
+.brand { display:inline-flex; align-items:center; gap:13px; text-decoration:none; }
+.brand-mark {
+  width:38px; height:38px; display:grid; place-items:center;
+  border:1px solid rgba(157,184,215,.35); border-radius:11px;
+  color:#dce8f5; background:#111b29; font-size:.78rem;
+  font-weight:800; letter-spacing:.08em;
+}
+.brand-copy { display:grid; gap:1px; }
+.brand-name { color:#f2f5fa; font-size:.88rem; font-weight:800; letter-spacing:.11em; }
+.brand-subtitle { color:#9eacbd; font-size:.66rem; font-weight:650; letter-spacing:.13em; }
+.top-credit { color:#7f8da0; font-size:.65rem; font-weight:700; letter-spacing:.14em; }
+.hero { background:#101722; border:1px solid var(--line); box-shadow:none; }
+section,.content-card { background:#0e1520; box-shadow:none; border-color:var(--line); }
+.unit-card,.feature-card,.toc { background:#0e1520; box-shadow:none; border-color:var(--line); }
+.unit-card:hover,.feature-card:hover {
+  transform:translateY(-3px); border-color:rgba(157,184,215,.42);
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+}
+.unit-button,.pager a { background:#172333; border-color:rgba(157,184,215,.22); }
+.unit-button:hover { background:#203247; border-color:rgba(157,184,215,.48); }
+.foot {
+  margin-top:64px; padding:34px 20px 30px; display:flex; flex-direction:column;
+  align-items:center; gap:5px; background:#080b12;
+  border-top:1px solid var(--line); color:#9aa8ba; text-align:center;
+}
+.foot strong { color:#e9eff7; font-size:.78rem; letter-spacing:.14em; }
+.foot span { color:#b7c4d3; font-size:.72rem; font-weight:700; letter-spacing:.12em; }
+.foot small { margin-top:5px; color:#728094; font-size:.68rem; }
+@media(max-width:600px) {
+  .top { padding:0 16px; }
+  .top-inner { min-height:68px; }
+  .top-credit { display:none; }
+  .brand-name { font-size:.76rem; }
+  .brand-subtitle { font-size:.59rem; }
+}
